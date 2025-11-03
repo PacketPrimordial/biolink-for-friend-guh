@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@Gloopy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0c10;
+  --glass: rgba(255,255,255,0.05);
+  --text: #f8fafc;
+  --muted: rgba(255,255,255,0.6);
+  --accent: linear-gradient(135deg, #8b5cf6, #ec4899);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: radial-gradient(600px at 20% 20%, rgba(139,92,246,0.1), transparent 70%),
+              radial-gradient(800px at 80% 80%, rgba(236,72,153,0.08), transparent 70%), var(--bg);
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  backdrop-filter: blur(16px) saturate(150%);
+  background: var(--glass);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 24px;
+  padding: 36px 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 12px;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 6px 0;
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p.subtitle {
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Section cards */
+.section {
+  background: rgba(255,255,255,0.06);
+  border-radius: 18px;
+  padding: 18px 16px;
+  margin: 16px 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.section h2 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding-bottom: 6px;
+}
+
+.list-item {
+  text-align: left;
+  font-size: 16px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+/* Badge styling */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 4px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  gap: 4px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.badge img {
+  width: 16px;
+  height: 16px;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+@media (max-width:500px) {
+  .container { padding: 28px 16px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="avatar">
+    <img src="pfp.png" alt="@Gloopy">
+  </div>
+  <h1>@Gloopy</h1>
+  <p class="subtitle">Femboy | Pronouns & Personal Info</p>
+
+  <div class="section">
+    <h2>Preferred Names</h2>
+    <div class="list-item">Gloopy</div>
+    <div class="list-item">You can choose other nicknames too</div>
+  </div>
+
+  <div class="section">
+    <h2>Pronouns</h2>
+    <div class="list-item">Any (He/Him preferred)</div>
+  </div>
+
+  <div class="section">
+    <h2>Likes</h2>
+    <div class="list-item">Games (Grace, FPS)</div>
+    <div class="list-item">Cuddling</div>
+    <div class="list-item">Guns</div>
+    <div class="list-item">Crystals & Polyhedra</div>
+  </div>
+
+  <div class="section">
+    <h2>Info</h2>
+    <div class="list-item">Furry & Femboy</div>
+    <div class="list-item">Dutch</div>
+    <div class="list-item">Taken :3</div>
+    <div class="list-item">Always responds to DMs</div>
+    <div class="list-item">If you'd like to know something, just ask!</div>
+  </div>
+
+  <div class="section">
+    <h2>Badges</h2>
+    <div class="badges">
+      <div class="badge"><img src="icons/1fac2-removebg-preview.png" alt=""> Friend</div>
+      <div class="badge"><img src="icons/5844-boykisser-removebg-preview.png" alt=""> Femboy</div>
+    </div>
+  </div>
+
+  <footer>© 2025 @Gloopy</footer>
+  <footer>UID: 2</footer>
+  
+</div>
+</body>
+</html>
+
